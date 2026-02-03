@@ -9,24 +9,45 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const videos = [
     {
         id: 1,
-        title: "World Record Plank",
-        category: "Records",
-        poster: "https://images.unsplash.com/photo-1517931524326-bdd55a541177?q=80&w=2070&auto=format&fit=crop",
-        src: "https://assets.mixkit.co/videos/preview/mixkit-man-working-out-on-a-cross-trainer-machine-1323-large.mp4" // Placeholder
-    },
-    {
-        id: 2,
-        title: "High Intensity Training",
-        category: "Training",
-        poster: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
-        src: "https://assets.mixkit.co/videos/preview/mixkit-athlete-working-out-with-heavy-ropes-at-the-gym-23140-large.mp4"
-    },
-    {
-        id: 3,
         title: "Deadlift Mastery",
         category: "Strength",
         poster: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
-        src: "https://assets.mixkit.co/videos/preview/mixkit-man-doing-heavy-weightlifting-23136-large.mp4"
+        src: "/videos/rinklefit_20260203_1.mp4"
+    },
+    {
+        id: 2,
+        title: "High Intensity",
+        category: "Cardio",
+        poster: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
+        src: "/videos/rinklefit_20260203_2.mp4"
+    },
+    {
+        id: 3,
+        title: "Gym Workout",
+        category: "Training",
+        poster: "https://images.unsplash.com/photo-1517931524326-bdd55a541177?q=80&w=2070&auto=format&fit=crop",
+        src: "/videos/rinklefit_20260203_3.mp4"
+    },
+    {
+        id: 4,
+        title: "Quick Routine",
+        category: "Fitness",
+        poster: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
+        src: "/videos/rinklefit_20260203_4.mp4"
+    },
+    {
+        id: 5,
+        title: "Core Strength",
+        category: "Power",
+        poster: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
+        src: "/videos/rinklefit_20260203_5.mp4"
+    },
+    {
+        id: 6,
+        title: "Endurance",
+        category: "Technique",
+        poster: "https://images.unsplash.com/photo-1517931524326-bdd55a541177?q=80&w=2070&auto=format&fit=crop",
+        src: "/videos/rinklefit_20260203_7.mp4"
     }
 ];
 
@@ -67,10 +88,6 @@ function VideoCard({ video }: { video: typeof videos[0] }) {
 
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
             className="relative aspect-[9/16] md:aspect-video rounded-xl overflow-hidden bg-dark-grey group cursor-pointer border border-white/10"
             onClick={togglePlay}
         >
@@ -158,26 +175,13 @@ export function VideoGallery() {
                 />
             </Container>
 
-            {/* Marquee Container - Full Width */}
-            <div className="w-full relative">
-                <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-black to-transparent pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-black to-transparent pointer-events-none" />
-
-                <Marquee speed={30}>
-                    <div className="flex gap-4 md:gap-6 px-3">
-                        {videos.map((video) => (
-                            <div key={video.id} className="w-[280px] sm:w-[350px] md:w-[400px] shrink-0">
-                                <VideoCard video={video} />
-                            </div>
-                        ))}
-                        {/* Add more diversity if needed for loop feel */}
-                        {videos.map((video) => (
-                            <div key={`${video.id}-dup`} className="w-[280px] sm:w-[350px] md:w-[400px] shrink-0">
-                                <VideoCard video={video} />
-                            </div>
-                        ))}
+            {/* Video Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+                {videos.map((video) => (
+                    <div key={video.id} className="w-full">
+                        <VideoCard video={video} />
                     </div>
-                </Marquee>
+                ))}
             </div>
         </section>
     );
