@@ -12,42 +12,42 @@ const videos = [
         title: "Deadlift Mastery",
         category: "Strength",
         poster: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
-        src: "/videos/rinklefit_20260203_1.mp4"
+        src: "/videos/rinklefit_20260203_1.mp4?v=1"
     },
     {
         id: 2,
         title: "High Intensity",
         category: "Cardio",
         poster: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
-        src: "/videos/rinklefit_20260203_2.mp4"
+        src: "/videos/rinklefit_20260203_2.mp4?v=1"
     },
     {
         id: 3,
         title: "Gym Workout",
         category: "Training",
         poster: "https://images.unsplash.com/photo-1517931524326-bdd55a541177?q=80&w=2070&auto=format&fit=crop",
-        src: "/videos/rinklefit_20260203_3.mp4"
+        src: "/videos/rinklefit_20260203_3.mp4?v=1"
     },
     {
         id: 4,
         title: "Quick Routine",
         category: "Fitness",
         poster: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop",
-        src: "/videos/rinklefit_20260203_4.mp4"
+        src: "/videos/rinklefit_20260203_4.mp4?v=1"
     },
     {
         id: 5,
         title: "Core Strength",
         category: "Power",
         poster: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
-        src: "/videos/rinklefit_20260203_5.mp4"
+        src: "/videos/rinklefit_20260203_5.mp4?v=1"
     },
     {
         id: 6,
         title: "Endurance",
         category: "Technique",
         poster: "https://images.unsplash.com/photo-1517931524326-bdd55a541177?q=80&w=2070&auto=format&fit=crop",
-        src: "/videos/rinklefit_20260203_7.mp4"
+        src: "/videos/rinklefit_20260203_7.mp4?v=1"
     }
 ];
 
