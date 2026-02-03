@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Desert / Tactical Light Theme */
+  --background: #F5F5Eb;
+  /* Warm Sand/Beige */
+  --foreground: #1c1c1c;
+  /* Dark Charcoal */
+
+  /* Army Theme Colors - Adjusted for Light Mode */
+  --army-green: #3A4B2C;
+  --army-green-light: #526840;
+  --gold: #C5A028;
+  /* Slightly darker gold for contrast on light bg */
+  --gold-light: #E5C355;
+  --dark-grey: #2A2A2A;
+  --off-white: #FFFFFF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-army-green: var(--army-green);
+  --color-army-green-light: var(--army-green-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-dark-grey: var(--dark-grey);
+  --color-off-white: var(--off-white);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-oswald);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (prefers-color-scheme: light) {
+
+  /* Enforce dark mode or adjust for light mode if requested. 
+     For this user, "dark, army-inspired aesthetic" implies dark mode default. 
+     Keeping it dark even in light mode for now to maintain the vibe. 
+  */
+  :root {
+    --background: #050505;
+    --foreground: #171717;
+    /* Reverting to dark text if we really need light mode, but let's stick to dark theme base */
+  }
+}
+
+/* Force dark theme for this specific portfolio vibe */
+:root {
+  --background: #050505;
+  --foreground: #e5e5e5;
 }
